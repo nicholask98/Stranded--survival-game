@@ -42,31 +42,37 @@ def home_screen():
     input()
 
 def inventory():
-    print('Inventory') #FIXME: Finish Inventory Menu
-    print('                   | INVENTORY |                   ') #FIXME: Finish Options Menu
+    print('Inventory')
+    print('                   | INVENTORY |                   ') #FIXME: Finish Inventory Menu
     print('---------------------------------------------------')
 
 def options():
     global current_options
-    print('                    | OPTIONS |                    ') #FIXME: Finish Options Menu
+    print('                    | OPTIONS |                    ') 
     print('---------------------------------------------------')
     
+    # for time_required in current_options:
+    #     for action in current_options[time_required]:
+    #         print(action)
+
     '''
     for option in current_options:
         print('[{}]: {}'.format(option, current_options[option]))
     '''
 
-    # Create a loop that lists available options
 
+# FIXME: figure out how to properly display options on options screen. Print the list index along with the selected
+# option so the user can input a choice.
 
 current_day = 1
 current_time = 800
-'''
-current_options = [
-    'Forage for berries',
-    'Go to Ocean and collect water': 200, 
-    'Collect branches fallen from trees': 100]
-'''
+
+options_1 = ['Gather Berries', 'Pick Apples', 'Pick Pears']
+options_2 = ['Collect Branches']
+options_3 = []
+options_4 = []
+current_options = [options_1, options_2, options_3, options_4]
+
 
 # STATS:
 hunger = 80
