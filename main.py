@@ -2,7 +2,6 @@ from os import system, name
 from time import sleep 
 import random
 
-
 # FUNCTIONS
 
 def clear(): 
@@ -21,37 +20,59 @@ def home_screen():
     global hunger
     global thirst
     global health
+    global current_day
+    global current_time
     print('---------------------------------------------------')
-    print('HUNGER: {}/100     THIRST: {}/100     HEALTH:{}/100'.format(hunger, thirst, health))
-    print('                                                   ')
-    print('                                                   ')
-    print('                                                   ')
-    print('                                                   ')
-    print('                                                   ')
-    print('                                                   ')
-    print('                                                   ')
+    print('HUNGER: {}/100  |  THIRST: {}/100  |  HEALTH:{}/100'.format(hunger, thirst, health))
+    print('\n\n\n\n\n\n\n')
     print('                        []                         ')
     print('                       \||/                        ')
-    print('                        /\                         ')
+    print(' Day: {}   Time: {}     /\                         '.format(current_day, current_time))
     print('---------------------------------------------------')
-    print('  [1]: Inventory                     [2]: Options  ')
+    print('  [1]: Inventory                     [2]: OPTIONS  ')
 
-    user_choice = int(input())
+    choice = int(input())
     clear()
-    if user_choice == 1:
-        print('Inventory')
-    elif user_choice == 2:
-        print('Options')
+    if choice == 1:
+        inventory()
+    elif choice == 2:
+        options()
     else:
         print('Error')
     input()
+
+def inventory():
+    print('Inventory') #FIXME: Finish Inventory Menu
+    print('                   | INVENTORY |                   ') #FIXME: Finish Options Menu
+    print('---------------------------------------------------')
+
+def options():
+    global current_options
+    print('                    | OPTIONS |                    ') #FIXME: Finish Options Menu
+    print('---------------------------------------------------')
+    
+    '''
+    for option in current_options:
+        print('[{}]: {}'.format(option, current_options[option]))
+    '''
+
+    # Create a loop that lists available options
+
+
 current_day = 1
 current_time = 800
+'''
+current_options = [
+    'Forage for berries',
+    'Go to Ocean and collect water': 200, 
+    'Collect branches fallen from trees': 100]
+'''
 
 # STATS:
 hunger = 80
 thirst = 80
 health = 80
+
 
 
 clear()
@@ -60,6 +81,7 @@ input()
 clear()
 print("\"We left you here and won't be back for at least the next 50 days.")
 print("You should probably figure out how to live on your own\"")
-
+input()
+clear()
 home_screen()
 clear()
