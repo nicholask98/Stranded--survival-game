@@ -50,16 +50,16 @@ def options():
     global current_options
     print('                    | OPTIONS |                    ') 
     print('---------------------------------------------------')
-    
-    # for time_required in current_options:
-    #     for action in current_options[time_required]:
-    #         print(action)
+    # EX. What I want this menu to look like:
 
-    '''
-    for option in current_options:
-        print('[{}]: {}'.format(option, current_options[option]))
-    '''
+    Time Action
+    1    
+    2
+    3
+    4
 
+
+# FIXME: Use enumerate() in for loops
 
 # FIXME: figure out how to properly display options on options screen. Print the list index along with the selected
 # option so the user can input a choice.
@@ -67,11 +67,11 @@ def options():
 current_day = 1
 current_time = 800
 
-options_1 = ['Gather Berries', 'Pick Apples', 'Pick Pears']
+food_opts = ['Gather Berries', 'Pick Apples', 'Pick Pears']
 options_2 = ['Collect Branches']
 options_3 = []
 options_4 = []
-current_options = [options_1, options_2, options_3, options_4]
+current_options = [food_opts, options_2, options_3, options_4]
 
 
 # STATS:
