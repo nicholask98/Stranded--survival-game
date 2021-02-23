@@ -43,35 +43,30 @@ def home_screen():
 
 def inventory():
     print('Inventory')
-    print('                   | INVENTORY |                   ') #FIXME: Finish Inventory Menu
+    print('                   | INVENTORY |                   ')
     print('---------------------------------------------------')
-
+     #FIXME: Finish Inventory Menu
 def options():
     global current_options
     print('                    | OPTIONS |                    ') 
     print('---------------------------------------------------')
+
+    # FIXME: Use enumerate() in for loops for Options user_choice
     # EX. What I want this menu to look like:
 
-    Time Action
-    1    
-    2
-    3
-    4
-
-
-# FIXME: Use enumerate() in for loops
-
-# FIXME: figure out how to properly display options on options screen. Print the list index along with the selected
-# option so the user can input a choice.
+    # [0] Back to Home Screen
+    # [1] Gather Berries: 1 hour(s)
+    # [2] Collect Branches: 2 hour(s)
+    # [3] Collect Water from Ocean: 3 hour(s)
+    # [4] Start a Fire with (4) branches: 1 hour(s)
+    # etc....
+    
 
 current_day = 1
 current_time = 800
 
-food_opts = ['Gather Berries', 'Pick Apples', 'Pick Pears']
-options_2 = ['Collect Branches']
-options_3 = []
-options_4 = []
-current_options = [food_opts, options_2, options_3, options_4]
+# FIXME: Could keep a dictionary of options with how many hours they are, but keep the current_options a list. Run current_options through the dict to return the hour count.
+current_options = ['Gather Berries', 'Collect Branches', 'Collect Water from Ocean']
 
 
 # STATS:
